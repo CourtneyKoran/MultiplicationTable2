@@ -1,0 +1,95 @@
+<!--
+File: index.html
+GUI Assignment: HW4. Creating a dynamic multiplication table with jquery validation, sliders, and tabs.
+Courtney Koran, UMass Lowell Computer Science, Courtney_Koran@student.uml.edu
+Copyright (c) 2021 by Courtney. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by CK on August 9, 2021.
+This html and javascript code creates a dynamic multiplication table  with jquery validation, sliders, and tabs
+using user iput from a html form and deletes specified tabs.
+-->
+
+<!-- using html 5-->
+<!DOCTYPE html>
+
+  <!--language is english-->
+  <html lang="en">
+
+    <!-- beginning of document header-->
+    <head>
+
+        <!-- linking css styling -->
+        <link rel="stylesheet" href="style.css">
+        <!--linking jquery validation-->
+        <script src="jquery-validation-1.19.3\lib\jquery.js"></script>
+        <script src="jquery-validation-1.19.3\dist\jquery.validate.js"></script>
+        <!--linking jquery user interface-->
+        <link rel="stylesheet" href="jquery-ui-1.12.1.custom\jquery-ui.css">
+        <script src="jquery-ui-1.12.1.custom\jquery-ui.js"></script>
+        
+    </head>
+
+<!-- start of webpage body -->
+<body>
+
+<!-- webpage header -->
+<h1>Multiplication Table Generator</h1>
+
+<!--container for form an form containing input boxes and sliders for multiplicaton table ranges-->
+<div id=divform>
+  <p>Please enter the ranges between -50 and 50 for the multiplcation table</p>
+
+<form id="frm1" >
+        
+          <label for="mincol">Minimum Column Value:</label>
+          <input type="number" name="mincol" id="mincol" required oninput="handleInput()"><br>
+            <p id="slider1"></p>
+        
+            <label for="maxcol">Maximum Column Value:</label>
+            <input type="number" name="maxcol" id="maxcol" required oninput="handleInput()"><br>
+            <p id="slider2"></p>
+      
+            <label for="minrow">Minimum Row Value:</label>
+            <input type="number" name="minrow" id="minrow" required oninput="handleInput()"><br>
+            <p id="slider3"></p>
+       
+            <label for="maxrow">Maximum Row Value:</label>
+            <input type="number" name="maxrow" id="maxrow" required oninput="handleInput()"><br>
+            <p id="slider4"></p>
+
+            <input type="submit" id= "submit" value="Save table"  />
+               
+</form>
+</div>
+
+<!--creating div that will contain tabs-->
+<div id="tabs">
+    <h2>Saved Multiplication Tables</h2>
+    <ul id = "tabslist">
+      
+    </ul>
+    
+  </div>
+ 
+  <!--getting user input to delete tabs-->
+  <br> <label>Enter the index or indexes of the tabs you would like to delete (comma seperated):</label>
+    <input for="indexNum" id="indexNum">
+    <button type="button" id="remove">Remove!</button><br>
+ 
+<!--linking slider js file-->
+<script src="jsslider.js"></script>
+
+
+<!--Validating the form -->
+<script src="jsval.js"></script>
+
+<!--linking tab js file-->
+<script src="jstabs.js"></script>
+
+  <!--external javascript included in body of html file-->
+  <script src="multTable.js"></script>
+  
+
+</body>
+</html>
+

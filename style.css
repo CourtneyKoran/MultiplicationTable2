@@ -1,0 +1,140 @@
+/*
+File: style.css
+GUI Assignment: HW4. Validating, creating dynamic sliders, and tabs for dynamic multiplication table using jquery.
+Copyright (c) 2021 by Courtney. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by CK on August 9, 2021.
+This css code styles the corresponding index.html file and javascript files 
+that creates a dynamic multiplication table with sliders, tabs, and validation.
+*/
+
+  /*Styling the first header*/
+  h1{
+    color: rgb(38, 102, 240) ;
+}
+
+/*Styling tabbed interface header*/
+  h2{
+    color: rgb(38, 102, 240) ;
+    margin-left: 20px;
+}
+
+/*Styling mult table: creating boarder*/
+table{
+  border: 2px solid rgb(38, 102, 240);
+}
+
+/*styling webpage as a whole*/
+body{
+  padding: 40px;
+  padding-top: 0px;
+}
+
+/*styling the container that holds the form*/
+#divform{
+  border: 2px solid rgb(27, 177, 236);
+  width: 30%;
+  padding: 15px;
+  text-align: center;
+  margin-right: 40px;
+  display: inline;
+  float: left;
+}
+
+/*Styling the form instructions*/
+#divform p{
+  font-weight: bold;
+}
+
+/*Styling the form*/
+#frm1{
+ margin-left:auto;
+  margin-right:auto;
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+/*Styling input boxes on form*/
+input:not(:nth-of-type(5)){
+  width: 50px;
+  height: 15px;
+  margin-right:5px;
+  margin-bottom: 10px;
+
+}
+
+/*styling table header cells*/
+th{
+  background-color: rgb(27, 177, 236);
+  width: 25px;
+  height: 25px;
+}
+
+/*Styling table body cells*/
+td{
+  text-align: center;
+  background-color: rgb(174, 226, 247);
+  width: 25px;
+  height: 25px;
+}
+
+/*formating table containers*/
+div:not(#divform) {
+    overflow-y: auto;
+    overflow-x: auto;
+    height: 500px;
+    width: 600px;
+    min-width:400px; 
+  }
+ 
+/*styling top table heading*/
+div:not(#divform) thead th {
+  position: sticky;
+  top: 0;
+}
+
+/*styling incorrect input messages*/
+#demo1, #demo2, #demo3, #demo4{
+    font-size: smaller;
+    color: tomato;
+    font-style: italic;
+}
+
+/* styling validation errors*/
+.error {
+    color: red;
+    font-size: smaller;
+    font-style: italic;
+ }
+
+ /*styling error labels below input fields*/
+ label.error { 
+    display: block;
+ }​
+
+ /*formatting sliders*/
+ #slider{
+     height:10px;
+     width: 30px;
+ }
+
+ /*formatting tabs*/
+ #tabslist >li{  
+    background-color: rgb(174, 226, 247); 
+    border: 1px solid #b9cd6d;  
+    color: rgb(27, 177, 236);  
+    font-weight: bold;  
+ }  
+
+ /*formatting tab heading*/
+ #tabslist{
+  background-color: rgb(27, 177, 236); 
+ }
+
+ /*formatting tabbed interface*/
+ #tabs
+ {
+  border: 2px solid rgb(27, 177, 236); 
+ }
+
+ 
